@@ -1,12 +1,12 @@
 import { culinr } from '../data/culinr.js'
 
-const Index = (props) => {
-    const chefs = props.chefs.map((chef) => {
+const Index = ({ chefs }) => {
+    const chefsDiv = chefs.map((chef) => {
         return <div key={chef.id}>{chef.name}</div>
     })
     return (
         <div>
-            {chefs}
+            {chefsDiv}
         </div>
     )
 }
