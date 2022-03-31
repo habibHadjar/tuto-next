@@ -11,10 +11,6 @@ const Index = ({ chefs }) => {
     )
 }
 
-/**
- * Get static props data from json file located at ../data/culinr.json
- */
-
 export async function getStaticProps() {
     // Filters out the dishes that are not revealed (online) yet
     culinr.chefs.forEach(chef => {
