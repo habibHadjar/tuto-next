@@ -1,12 +1,13 @@
 import { culinr } from '../data/culinr.js'
+import Chef from '../components/Chefs/Chef.js'
 
 const Index = ({ chefs }) => {
-    const chefsDiv = chefs.map((chef) => {
-        return <div key={chef.id}>{chef.name}</div>
+    const chefComponents = chefs.map( chef => {
+        return <Chef key={chef.id} {...chef} />
     })
     return (
         <div>
-            {chefsDiv}
+            {chefComponents}
         </div>
     )
 }
