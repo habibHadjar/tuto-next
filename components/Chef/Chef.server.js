@@ -1,5 +1,5 @@
 import React from 'react'
-import Dish from '../Dish/Dish'
+import Dish from '../Dish/Dish.server'
 
 const Chef = ({ id, name, dishes }) => {
     return (
