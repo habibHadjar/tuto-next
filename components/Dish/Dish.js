@@ -6,8 +6,8 @@ const Dish = (props) => {
     })
 
     let newSticker, soldOutSticker
-    props.isNew ? newSticker = <span className="badge badge-primary"><strong style={{ fontSize: '0.8rem', color: 'blue' }}>new</strong></span> : null
-    props.isSold ? soldOutSticker = <span className="badge badge-primary"><em style={{ color: 'red' }}> - SOLD OUT - </em></span> : null
+    props.isNew ? newSticker = <span><strong style={{ fontSize: '0.8rem', color: 'blue' }}>new</strong></span> : null
+    props.isSold ? soldOutSticker = <span><em style={{ color: 'red' }}> - SOLD OUT - </em></span> : null
     return (
         <>
             {newSticker}<li key={props.id}> {props.name} {soldOutSticker}</li>
