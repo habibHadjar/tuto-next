@@ -1,16 +1,17 @@
-import React from 'react';
+import React from 'react'
+import Dish from '../Dish/Dish'
 
-const Chef = (props) => {
+const Chef = ({ id, name, dishes }) => {
     return (
         <>
-            <p key={props.id}>{props.name}</p>
+            <p key={id}>{name}</p>
             <ul>
-                {props.dishes.map(dish => {
-                    return <li key={dish.id}>{dish.name}</li>
-                })}
+                {dishes.map( dish => (
+                    <Dish key={dish.id} {...dish} />
+                ))}
             </ul>
         </>
-    );
+    )
 }
 
-export default Chef;
+export default Chef
