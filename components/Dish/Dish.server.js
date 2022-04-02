@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import gsap from 'gsap' 
 
 const Dish = (props) => {
+  const liRef = useRef(null)
+
   const ingredientsList = props.ingredients.map(ingredient => {
-    return <li key={ingredient}>{ingredient}</li>
+    return <li ref={liRef} className="ingredients" key={ingredient}>{ingredient}</li>
   })
 
   const newStickerStyle = { fontSize: '0.8rem', color: 'blue' }
   const soldOutStickerStyle = { color: 'red' }
+
 
   let newSticker, soldOutSticker
 
@@ -16,6 +20,17 @@ const Dish = (props) => {
   if (props.isSold) {
     soldOutSticker = <span><em style={soldOutStickerStyle}> - SOLD OUT - </em></span>
   }
+
+
+  useEffect(() => {
+    gsap.to('.ingredients', {
+      x: 100,
+      ease: 'ease-in-out',
+      stagger: {
+        amount: 0.7
+      }
+    })
+  }, [])
 
   return (
     <>
