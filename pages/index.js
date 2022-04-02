@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Section from '../components/Section/Section.server'
+import Section from '../components/Section/Section'
 
 const Index = () => {
   return (
