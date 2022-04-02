@@ -27,7 +27,8 @@ const Dish = (props) => {
       x: 100,
       ease: 'ease-in-out',
       stagger: {
-        amount: 0.7
+        amount: 0.7,
+        from: 'center'
       }
     })
   }, [])
